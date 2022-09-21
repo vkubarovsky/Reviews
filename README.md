@@ -1,2 +1,2 @@
 # Reviews
-My CLAS12 Reviews
+My CLAS and CLAS12 Reviews
