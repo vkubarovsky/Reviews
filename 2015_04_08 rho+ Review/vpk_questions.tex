@@ -1,0 +1,105 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Analysis Note Review\\
+Strangeness photoproduction via the reactions\\
+$\gamma p\to K^+\Sigma^0$ and $\gamma p\to \phi p$\\
+using CLAS\\
+by Biblab Dey}
+\author{Valery Kubarovsky}
+\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\section{CMU analysis}
+%\subsection{}
+Page 12. Fig 1.4 Capture. Line 3 
+
+~~~~~~~~    of a ...
+
+
+Page 21 Line 2  Calculated mass of p can not be between 0.3 GeV and 1.2 GeV
+
+Page 25 particle ID.
+
+I want the calculated proton mass as a function of the proton momentum
+or better the difference between predicted and measured TOF a s a function of the proton momentum
+
+page 25 section 1.8.3 Line 11 Sec.??
+There are a lot of ?? in the text. Ask the author to remove all of them.
+
+Page 27. Section 1.9.2 Timing cut
+
+Timing proton cut as a function of the proton momentum.
+
+
+page 28 Section 1.10.1 Line 5 Cconfidence
+
+
+Page 53 Section 2.10.2 Live time corrections.
+
+What is Live Time Correction? CLAS has zero live time corrections.
+I can't accept this explanation of the inefficiency. This section MUST be rewritten 
+and the problem of the inefficiensy revisited.
+
+Page 77 Chapter 4   FORMUL?????
+
+Page 87 Table 4.2
+
+What is Live-time systematic error?
+
+\section{ODU analysis}
+
+Figure 3. Where is Pomeron exchange? Where is K+ exchange?
+Figure 4 looks differently.
+
+Page 22. Do they take into account the $K_S$ time of flight? The same question to CMU.
+$K_S$ may escape the SC array.
+
+Page 24. There was also a requirement of NO neutral particles in the final event set.
+
+This is very dangerous cut. There is $K_L$  meson in the event. It is neutral and interacts with EC with high probability. I am not sure that MC will reproduce this efect correctly.  They have to remove this cut from the analysis.
+
+Page 33. Detection efficiency
+
+I am not sure that this method of calculating the efficiency is correct. For example it doesn't take into account the finite resolution of CLAS detector. You calculate the missing particle inside the fiducial  volume, on fact it may be out of the fiducial volume. What is important is to compare the data and MC efficiency and apply  as a correction the ratio of eff(DATA)/eff(MC). This was done in the CMU analysis I believe.
+
+Page 48. Background separation.
+
+It is VERY strange estimation of background. And it is very strange the calculation of the systematic error due
+this factor (page 83). The correct way to estimate this factor is to fit the distribution by right BW (see CMU note) and from this fit determine the factor.
+
+Page 49. Formula 59.
+
+What is $e$? If $t=t_{min}$ the function goto infinity???
+
+Formula 60. What is x? 
+
+Page 3.8.2 Again do they have correction due to finite live time of $K_S$?
+
+Page 83. What is systematic error due to target proton vertex? I don't think that in the exclusive reaction we have contamination from the target walls. Suggest to analyze the empty target run and show the z distribution for the events after ALL cuts. I am not sure that you will see the walls. So this correction factor 3.5\% may be incorrect.
+
+\section{Questions to CMU and ODU}
+
+It is very important to compare the CLAS data with published data. And it is evn more very important to
+make sure that ODU and CMU cross sections are compatible well inside the errors. It is the same data set btw. Some systematics doesn't play a role at all (for example the absolute normalization, that is just the same I believe). So we have to suggest these two groups to present data in a coherent way: the same binning, the same variables, the same plots. We have to insist on this if they want to publish the absolute cross sections.
+It is big job , I know, but it is the only way to make sure that we are OK with publication. Any way the publication will be combined. Or we want to publish two papers based on the same data set?
+I don't think so.
+
+Some misprints on pages 25,27,28,42 you will find in the attached analysis note pdf file.
+
+This is my 3 cents.
+
+vk
+
+   
+
+ 
+\end{document}  

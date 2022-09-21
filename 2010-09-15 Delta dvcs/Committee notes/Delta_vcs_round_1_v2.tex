@@ -1,0 +1,670 @@
+\documentclass[11pt]{paper}
+
+\usepackage{hyperref}
+
+\title{Review of the CLAS analysis note\\ "Beam Spin Asymmetry of the electroproduction of a 
+$\Delta^+$ resonance and a photon on the proton 
+($ep\to e \Delta^+\gamma$)" by\\
+B. Moreno and M. MacCormick 
+  }
+\author{V. Kubarovsky$^*$, W. Brooks, F.X. Girod, A. Kubarovsky}
+
+\begin{document}
+\maketitle
+
+\let\oldthefootnote\thefootnote
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\footnotetext[1]{Committee chair}
+\let\thefootnote\oldthefootnote
+
+\rightline{January 28, 2011}
+
+\section*{General comments}
+
+
+The note properly puts into context the goals of the analysis.
+The observation of $\Delta$VCS may be as much awaited as it is a challenging measurement.
+The results presented are both encouraging and intriguing. 
+The difference in signs of the BSA in the $\Delta$ region for $p\pi^0$ and $n\pi^+$ final states
+is very impressive. However the committee thinks that this phenomena deserves to be
+studied and reported in more detail. 
+
+\begin{enumerate}
+
+\item The analysis writeup demonstrates a heroic effort in the face of a very challenging problem that is near the limit of what can be reliably measured in this data set. The amount of work that has been performed is really very impressive, and the authors are to be commended for this. 
+
+\item The cross section of the reaction is very small and the background is substantial. 
+This means that the extraction of the exclusive reaction is challenging. 
+Due to the lack of a fully detailed description of the applied cuts and supporting distributions, we were not convinced that you singled out the exclusive reactions under study. 
+Table 4.1 contains 3 missing mass cuts and a missing energy cut, for instance. As discussed in more detail below, these numerous missing mass cuts mask the real exclusivity of the reaction. 
+Please provide convincing proof that you really have isolated exclusive $\Delta$VCS reaction as well as the background $\pi^0$ production.
+ 
+\item A very robust method to estimate the systematics and test whether the background has a significant impact on the final BSA, and is in general under control, consists in
+varying the exclusivity cuts, re-estimate the contaminations and compare the final BSA.
+This method was applied in the proton DVCS publication for instance, where the contamination was less challenging and its BSA already measured directly.
+The committee feels that such a study is mandatory for a complete estimation of the systematic errors.
+
+\item The simple phase space MC programs for the $\Delta$VCS reaction and background reactions show unsatisfactory comparison with the experimental data. 
+The committee urges the authors to invest more effort into the development of the MC programs.  
+The committee is concerned that the evaluation of the beam spin asymmetry and background contamination have large systematic errors due to the MC generators. 
+Future measurements of $\Delta$VCS would also benefit greatly from the availability of more realistic simulations both for signal and background. The piecemeal approach taken here makes it difficult to have confidence in the assessment of the systematic uncertainties of the measurement.
+
+\item To continue on the above theme in more detail, in the cases where an N-body phase space Monte Carlo is used, why is this adequate? Why isn't a more realistic event generator needed? The disagreement in some of the distributions is quite striking. One-dimensional distribution comparisons seem quite insufficient for evaluating the agreement between simulation and data for these multi-body final states. Comparing 2-D distributions in invariant and missing masses, or momenta and angles, for instance, gives a better feeling for how similar the simulation and data are. For instance, Figure 4.3 shows a two dimensional plot from the simulation; one may wonder how it looks in the data. In another example, the cut selection procedure discussed on pages 38 and 39 is applied to distributions from a phase space generator, but why is this appropriate if the simulated distributions are markedly different from the data distributions? We do not agree with the argument on the top of page 37 concerning this point. It seems to us that the signal to background ratio can depend on the dynamical distributions, not only on the detector resolution. 
+
+\item The $\Delta$ signal in Figures 4.10, 4.11 and 6.4 is very weak.  
+The huge background under the peak is coming from the non-resonant channels or from the reaction $ep\to e\Delta \pi^0$ with one photon lost. 
+It will be very hard to claim that we found evidence for an interference between the $\Delta$VCS and Bethe-Heitler processes.
+At this stage it seems more reasonable to claim only a measurement of the BSA for two reactions $ep\to ep\pi^0\gamma$ and $ep\to en\pi^+\gamma$ in the $\Delta$ region. The figures mentioned above, which are supposed to illustrate that resonances are isolated in this measurement, are very unconvincing without an overlaid Monte Carlo calculation. Based on visual appearances, it could be almost entirely background. Without comparison to a realistic simulation, these plots have little value.
+
+\item Even with limited statistics, it would be valuable to have as a future reference the BSA for the $ep\to ep\pi^0\gamma$ in the two higher mass regions as well as for the $ep\to en\pi^+\gamma$ channel.
+
+\item You observed different BSA signs for the reactions with $p\pi^0$ and $n\pi^+$ in the final state.  
+In the absence of the non-resonant channels these two asymmetries must be the same. 
+The theoretical paper [3] really predicts the difference between these two reactions. 
+However this difference lies in the threshold region below the $\Delta$ resonance. 
+The BSA's  at $M(N\pi)>1.2$ GeV are almost equal to each other.
+We have to check all possible systematic errors before the CLAS collaboration will publish such an impressive observation.  
+We noticed that some BSAs that you presented in Fig. 5.12, 6.5, 6.7 and 7.6 are in average negative. 
+This average value is at the level -10\%. 
+As you know, such an average asymmetry breaks parity and must be at the level of a few parts per million, that is to say, zero for our purposes. 
+Do you have an explanation for this shift in the measurement of BSA ?
+Unless this shift is explained or taken care of otherwise, it should be considered as a systematic error.
+
+\item The e1dvcs group can readily provide C and fortran codes for improved fiducial cuts and various corrections, superseding several used in this analysis.
+We suggest the authors implement those standard cuts and corrections, as well as MC background merging.
+At several points, for instance, it seems that the analysis requires a fixed number of detected photons, down to low energy.
+This is an example of where the merging of background from data with GSIM Monte-Carlo can significantly change the results.
+
+\item The analysis was based on fitting, selecting and excluding different mass (squared) regions.
+Given that the measurement is exploratory, it may be fine for now.
+This strategy, however, sacrifices some statistics (for instance the omega region in the 
+$p\pi^0$ channel, Fig. 4.8).
+It could prove useful to clarify the following question for future analysis: would a partial wave analysis help to separate the different contributions?
+In conjunction with maximum likelihood, it could possibly improve the results significantly in dealing with low statistics.
+
+\item Are electron radiative corrections included in the main reference [3]?
+Although it may affect very little the BSA itself, it may help to understand better the discrepancies between non-radiative GSIM and data.
+The analysis has to make use of several missing mass cuts whose resolution is affected by radiative effects.
+Apart from mere background and radiative corrections, other effects contributing to discrepancies between GSIM and data could be GPP parameters 
+(it is not indicated in this note how they were chosen) and individual particle corrections (kinematical fits).
+
+\item A simple and easy improvement to the note for its readers would be to display the individual particle lab kinematics in the final state for each reaction under consideration.
+
+\item The note lists a number of simulations, both phase-space and realistic, a number of assumptions, and so forth, and it is difficult to understand which assumptions apply to which parts of the analysis. The document would benefit from adding an analysis summary of one or two pages. The summary could be a place to organize the information about all the various simulations, the important cuts, the assumptions made, etc. This may have the effect of focusing and organizing the discussion. 
+
+\item It seems that only statistical errors are shown on all plots. While some evaluation of systematic uncertainties is performed, they may be underestimated as discussed above; and, they should be displayed on the plots, at least on the final results plots.
+
+\item The level of detail for the neutron section is insufficient to evaluate the analysis. For example, there must be contamination of higher W states into the delta region for the case where the neutron momentum is used. For the higher energy states, the neutron momentum must be fairly high, and the resolution may be large, e.g., up to 100\%. To look at this, please check the value of $W_{thrown}$ in the simulation for the events that made it through the final cuts, and plot the distribution of $W_{thrown}$ after cuts on $W_{reconstructed}$ for the delta region. It may also be true, to a much lesser extent, for the $\pi^0$ case. 
+
+\item Contamination levels from various backgrounds are shown, ranging from 20\% to 50\%. How is this number used in the analysis? 
+
+\item Please verify: We believe acceptance corrections were used only in the determination of the number of background events, and nowhere else in the analysis. Is this correct? 
+
+\item All uses of the word Figure, Table, etc. in the text should be capitalized. 
+Please do a search and replace to substitute " et " with " and " throughout.
+
+\end{enumerate} 
+
+\newpage
+
+\section*{Abstract}
+Assign an analysis note number?
+Line 1, 'non-perturbative' is misspelled.
+
+\section*{Chapter 1 Physics motivations}
+Page 8, line 3 'transferred' is misspelled.
+Page 8, mid-page, 'transition' is misspelled.
+Page 8, last line, these variables are {\em{not}} defined in the same limit as the variables above. Further, the statements on the following page about the virtual photon are made in the single photon exchange approximation, which could be noted. 
+\subsection*{Page 10, Fig. 1}
+
+The momentum of virtual quark ($x-\xi$) is incorrect. The correct expression
+is $(x-\xi)P^+ + {{Q^2}\over{4\xi}}  P^-$. We propose you just to drop it because anyway you have no definition for $x$, nor for $\xi$.
+
+Should not~: ''the nucleon and $\Delta^+$ are rotational excitations of the same object''
+read~''The $\Delta^+$ is a rotational excitation of the nucleon'' ?
+
+\subsection*{Page 11, Theoretical expectations}
+Figure 3 shows the expectation from ref [3] for the end result of this analysis and may benefit from a slightly extended discussion.
+The $W_{\pi N} $ range extends up to where the authors trusted their approximations.
+Anticipating on the final results, a short reminder about the domain of validity could be helpful.
+There is a suggestive coincidence that the range of validity stops when the prediction is about to become negative.
+Clarifying with the authors of [3] what makes the sign change may prove useful to formulate a final conclusion for this measurement, in the $\Delta\rightarrow n\pi^+$.
+
+Page 14 should say, "Also, a subset of the data, using a more restrictive event selection, was created."
+
+\section*{Chapter 2 Data taking}
+
+\subsection*{Beam polarization}
+
+What is the typical statistical error in Fig. 2.1 ?
+It visually seems to be more than 1\%.
+
+\subsection*{Data}
+
+This section contains a description of different data formats and skims, but does not mention which set was used.
+
+\section*{Chapter 3, Particle identification}
+Page 15, Line 4, 'developed' is misspelled.
+
+\noindent Section 3.1.1 should read 'Energy loss in the inner part...'
+
+\noindent Page 15, last paragraph seems to suggest that pions only interact as minimum ionizing particles, while in fact something like 30\% of the pions interact hadronically in the calorimeter materials.
+
+ \subsection*{Page 16, Electron momentum threshold}
+The minimum momentum 0.55 GeV/c is quite low.
+This can cause large trigger inefficiencies and large electron radiative corrections.
+Was such a low momentum chosen only for increasing the statistics ?
+Using poor efficiency regions in association with very low statistics seems quite dangerous.
+
+Related to this issue, this analysis uses DC fiducial cuts to remove the edge of the CC.
+There are much improved cuts readily available in both C and Fortran for this purpose. 
+
+Page 16, top line, the calorimeter is not made out of lucite. While the energy loss is the same, the sentence can lead to confusion. Suggest to put the words "scintillator (Bicron BC412, polyvinyltolfene)" or something similar.
+
+Page 16, figure caption, replace 'external' with 'outer'.
+
+\subsection*{Page 17, Fig. 3.2} It seems to us that you did not take into account the electron beam position, did you?
+If you will do it you will get much sharper Z-vertex distribution. As it is, you are adding backgrounds into your sample, and differently for different sectors. Several E1-DVCS people have already done this, so it should not be much effort to just re-use their corrections.
+
+Page 17, "Another peak is visible around -57.5 cm and is attributed to interactions in the downstream target exit window". This is repeated in the figure caption of Figure 3.2. It is not likely this is the target window, since that is in contact with the cryoliquid. It is more likely this is the exit window of the scattering chamber. Please check. 
+
+ \subsection*{Page 18, EC fiducial cuts}
+ 
+ How did you find these cuts (3.4-3.5)? 
+
+The reference for EC sampling fraction in between equations (3.7) and (3.8) did not compile.
+
+\subsection*{Page 20, Fig. 3.4}
+How did you find these expressions (3.10-11) ?
+
+%Discussed this with Valery on Friday 21st Jan (FX)
+%The parametrization for  $\sigma(p)$ is suspicious. It does not reflect the EC calorimeter resolution.
+%You have to slice your plot and fit it.
+
+\subsection*{Page 21, DC fiducial cuts for electrons}
+How did you get the parameters for cuts (3.14-16) ?
+
+There are dead areas in the different sectors. Where are the fiducial cuts for these areas?
+
+You did not cut at all the small $\theta$ angles. You can easily see the shadow of the IC calorimeter
+in your plots. You have to carefully cut these angles as well.
+
+Please provide the same distribution for your MC events with good resolution and make the comparison.
+
+The Cherenkov counter has inefficiency in the middle of the sector.  
+
+Page 21, Section 3.1.7: There is mention of an observed peak at 5 photoelectrons due to pions. Later in this section it says the peak is at 1 photoelectron. Please clarify. 
+
+\subsection*{Page 22, Positives}
+
+It is difficult to read the scatter plot in Fig. 3.8 : can the plot be made into a color plot ?
+There are seen to be muons in the very low momentum range. Does this have any impact on the analysis? A plot for beta vs momentum for the final samples, both protons and pions, would be quite helpful.
+
+What is the rationale behind the choice of parameterization in (3.22-23)?
+It seems that $\mu(\beta)$ is essentially a constant at zero, but it is chosen as a polynomial of order six (!).
+The committee failed to reproduce the expected shapes from the plot using the formulas provided.
+Can those formulae be re-checked ?
+
+The underlying reason behind the use of vertex kinematic variables for the fiducial cuts was a fast Monte-Carlo.
+Has the application of (3.24-26) been investigated for pions ?
+
+There isn't a visible separation between sectors after the proton fiducial cuts (Fig. 3.9). We assume this is because those plots and the cuts are done at the vertex. Low momentum protons are very much bent in the solenoid field. As a result, a given hole corresponding to one of the torus coils shows up at different phi for a given theta, depending on momentum. Is this correct? If so, this plot doesn't demonstrate very well that the fiducial cuts are properly handled.
+
+Page 23, first sentence, replace 'ans' with and. What do the subscripts "vol" and "cal" mean in equations 3.18 and 3.19?
+
+Page 23 Line 5, remove 's' from 'measureds'.
+Page 23 Line 10, removed 'd' from 'agreed'.
+
+\subsection*{Page 25, Neutrals}
+
+The main concern for photons is the minimum detection energy.
+What was the minimum energy required for photons ?
+
+Page 25, Lines 2, Line 4, and figure caption of Figure 3.9: 'azimuthal' is misspelled.
+
+Page 25, figure caption of Figure 3.9: 'displays' is misspelled.
+
+Page 25, last line: replace 'Identification criterion' with 'The identification criteria'.
+
+\subsection*{IC case}
+
+Has any correction been applied to photons detected in IC ?
+
+Why is it a good assumption that all electromagnetic showers measured with the IC have been induced by photons? Does the simulation demonstrate this? There also can be neutrons whose interactions look like electromagnetic particles, and electrons and positrons, including those that do not come from the target, even if the primary electron comes from the target.
+
+\subsection*{EC case}
+
+First line~: Ec $\rightarrow$ EC
+
+The EC fiducial cuts are not supposed to be the same as for the electron, since neutrals are not in-bent.
+The shadow of IC is visible on Fig 3.10.
+Improving fiducial cuts might also help with the large backgrounds.
+
+The value 0.92 for photon's beta was modified from its previous cut 0.95 at the beginning of e1dvcs.
+0.92 was estimated at that time to be a 5 sigma cut for photons.
+Can we see beta vs energy for the final sample of photons ?
+Can we see delta beta vs beta for the final sample of neutrons ?
+
+Was Rita's correction, or an equivalent, used for this analysis ?
+
+Are EC fiducial cuts for neutrons supposed to be the same as for photons?
+The neutrons do not create electromagnetic showers, and their hits may have a larger radius.
+
+Can we see $\Delta\beta$ vs $p(\beta)$ ?
+Is the tail in the $\Delta\beta$ spectrum due to background ?
+If so, it seems that the procedure to adjust the beta cut for neutron identification would depend on the reaction.
+
+Page 26, third line from the bottom: replace 'hte' with 'the', if that is what is meant.
+
+Page 27, figure caption for Figure 3.11, 'distribution' is misspelled.
+
+Page 27, Line 4, 'defining' is misspelled.
+
+Page 24, Line 7, 'developed' is misspelled.
+
+Page 27, footnote, clarify: 'there are no neutrons' or 'there is no neutron'?
+
+\section*{Chapter 4}
+\subsection*{Proton-$\pi^0$ channel}
+
+\subsection*{Page 30, Introduction}
+
+''... a sizable asymmetry [...] may indicate that the Bjorken regime [...] has been reached''
+
+What is the basis for this claim ? Given that no $Q^2$ dependence has been investigated, it seems premature to speculate on the Bjorken regime.
+
+Page 30, Line 18, 'too' is misspelled.
+
+Page 30, Line 23, says 'a three-step can be developed.' Does it mean 'a three-step procedure can be developed'?
+
+\subsection*{Page 31, $ep\rightarrow ep\pi^0\gamma$ selection}
+
+Have {\bf exactly} three photons (and no more) been required ?
+Depending on the minimal energy threshold for photon detection, requiring exactly three could be quite harmful to the statistics.
+
+Bottom of the page~: $m_{\pi^0}=0.018\mbox{ GeV}^2\rightarrow m^2_{\pi^0}=0.018\mbox{ GeV}^2$
+
+\subsection*{4.1.2 Phase space of the decay channel}
+
+It is unclear whether the events from the ROOT TGenPhaseSpace have been fed into GSIM or at least some CLAS acceptance.
+Were plots 4.2 and 4.3 after acceptance of all particles ?
+Why was the sample from genbod not used instead ?
+
+Page 31, Line 14, and Page 32, last line, 'developed' is misspelled.
+
+\subsection*{Page 34}
+\subsubsection*{line 6 in paragraph below Fig 3.2}
+
+On the lower half of page 34, there is a discussion that concludes that the most energetic photon is the radiated one. This is based on approximations listed in that paragraph such as symmetrical $\pi^0$ decay. Is this conclusion a qualitative one that is just for the purposes of illustration, or is it an assumption that is used during the full analysis?
+
+\subsubsection*{line 8} $\Delta^+$ cannot  distribute it's energy equally between the proton and the $\pi^0$ due to the big mass difference of these particles. 
+The energy distribution of the particle in the reaction must be evaluated on the basis of the careful simulation of the reaction under study. 
+We suggest to make the conclusion about the energy distributions on the basis of the MC plots and include these plots to the analysis note.  
+
+Page 34, Line 10, 'the' is misspelled, and the sentence needs a period at the end.
+
+\subsection*{4.2.1 Selection cuts}
+There are 8 independent variables to completely describe the process under consideration $ep\rightarrow e\Delta\gamma\rightarrow ep\pi^0\gamma\rightarrow ep\gamma\gamma\gamma$.
+\begin{itemize}
+\item The final state with 5 particles needs the specification of 15 variables (one momentum and two angles for each particle)
+\item Overall energy-momentum conservation reduces the freedom to 11
+\item The intermediate decays $\Delta\rightarrow p\pi^0$ and $\pi^0\rightarrow\gamma\gamma$ have fixed invariant mass (within particles widths), reducing freedom to 9
+\item Given that there is no transverse polarization in the initial state, there is one overall arbitrary angle around the beam
+\end{itemize}
+There is a list of 5 cuts. Evidently one can always reduce $N$ cuts of the form $|X_i-\mu_i|<\sigma_i$ to one cut by 
+$$\sum_{i=1}^N\left(\frac{X_i-\mu_i}{\sigma_i}\right)^2<1$$
+It is easy to count that the first cut on missing transverse momentum amounts to 2 independent degrees of freedom, or that the last cut $\Phi_{(\gamma^*\Delta^+\gamma)}$ amounts to one DOF.
+It is however more difficult to count how many genuinely independent degrees of freedom remain after a series of missing mass cuts, as the trivial example above suggest.
+Missing masses are typically very correlated with the overall missing energy.
+Can we see the following distributions after all cuts :
+\begin{itemize}
+\item angle between the direction of $\pi^0$ as measured form the two photons and as predicted from the other particles
+\item angle between the detected proton and the direction predicted from the other particles
+\end{itemize}
+
+Page 35, Line 9, 'discrepancies' is misspelled.
+
+Page 35, title of Section 4.2.1, 'positioning' is misspelled.
+
+\subsection*{Page 36, Simulation} The phase space generator is too simple to make a conclusion about the angular distribution of the particles. 
+We suggest to use more realistic MC generator that takes into account the realistic $\Delta$VCS kinematics.
+
+You have to prove that a phase space generator is sufficient for this study. 
+
+Page 36, Line 6, remove 'be' from 'that may be prove useful' .
+
+\subsection*{Page 37, Algorithm to choose selection cut values}
+Are the upper and lower panels of figure 4.5 supposed to display independent information ?
+Is it not the case that $R_{lo} = 1-R_{up}$ or $\Delta R_{up} + \Delta R_{lo} = 0$ ?
+
+The method suggests a precise and systematic algorithm for the choice of cuts to maximize the signal acceptance while rejecting the simulated noise.
+The development of such an algorithm would be highly desirable, as it is notoriously tedious to investigate correlated cuts applied successively.
+Eventually however, it seems that the position of the arrow in the plots are chosen by eye.
+Can Table 4.1 be supplemented with an estimation of the number of "sigma" from say a gaussian fit, adjusted to avoid the radiative/background tail ?
+Even if the distributions are not gaussians, it does provide a quantitative method to compare data and simulations.
+
+\subsection*{Page 39, Results and application of selection cuts}
+
+The data vs GSIM resolution plots such as 4.6 or 4.7 sometimes show quite different position and width.
+Although it is not quite satisfactory to accept this situation and apply different cuts, it seems that applying the same cuts is even worse.
+Why not adjust the cuts according to some conventional definition (most of the distributions are not gaussian) of the position and width ?
+It is doubtful that delta phi width mismatch for instance comes only from the radiative tail.
+
+Page 40, Line 3, 'Discrepancies' is misspelled.
+
+\subsection*{Page 41} 
+It is not clear what cuts were applied to create all plots in Figures 4.6 and 4.7.
+
+Missing energy is very important. This plot shows that MC and data are very different. 
+Please fit these distributions and show the mean and sigma for data and MC. Missing energy from data sample shifted from zero. 
+It means that the sample contains unknown contamination by background processes.
+
+$M^2_{ep3\gamma X}$ distribution has zero mean for background and reaction that you want to study. So this distribution doesn't mean much.
+  
+\subsection*{Page 42}
+
+All distributions from Figure 4.7 show a significant difference between data and MC. 
+We conclude that we have large amount of background events in our data sample after all cuts.  
+It means that the exclusive reaction was not correctly singled out or MC program doesn't describe the $\Delta$VCS process. 
+
+Page 43, Line 12, 'adjustable' is misspelled.
+Page 44, Line 3, 'sideband' is misspelled.
+
+
+\subsection*{Page 44, Combinatorial background subtraction}
+Misprint: inabilityto $\rightarrow$ inability to
+
+\subsection*{Page 45 Method}
+
+The background is not linear in the $3-6\sigma$ region.
+
+\subsection*{Page 45, Results and discussions}
+It is difficult to agree that in the $M(\pi^0p)$ distributions $\Delta^+$ peak is visible. 
+The distributions are very wide with no prominent peak structure. 
+The distribution starts from the threshold and has maximum near  $M_\Delta$. But it is too wide to be a real $\Delta^+$. The most visible structure is seen in the IC/EC plot.
+
+There is a claim that one can estimate the number of $\Delta^+$ baryons from plots 4.10 and 4.11.
+Please provide the plots with fits.
+
+\subsection*{Page 46}
+The sentence ''Behavior differences between detection combinations render their kinematic selectivity.'' seems incomplete.
+
+\subsection*{4.2.4 Phase space covered}
+
+There does not seem to be a $Q^2$ or W cut. Is it not standard to use $Q^2>1$ and $W>2$ for deep measurements ?
+
+Was there a cut on -$t > -t_{min} $?
+
+\subsection*{4.2.4 Page 51 Results}
+
+The BSA is given in this channel only for $1.08 <M_{\pi^0p}<1.32$ GeV/c$^2$. 
+In the $n\pi^+$ channel, two additional mass bins have been investigated in the $2^{nd}$ and $3^{rd}$ mass regions.
+The statistics for the 2 channels differ by a factor 2.
+Have the other  $M_{\pi^0p}$ mass bins been investigated ?
+It would be valuable to keep the results in the note.
+
+\subsection*{Page 52, Principal}
+
+The calculation of the contamination $R$ is completely based on the Monte Carlo simulation.
+The result will dramatically depend on the quality of the MC program that has to perfectly describe
+double pion electroproduction. The problem is in the small CLAS acceptance for detecting 6 particles.
+We are sure that a phase space MC program is inadequate and unacceptable for this study.
+You need to try more realistic models and compare the results.
+
+Please provide the acceptance calculation that you are using for the $R$ determination.
+
+How do you explain the small contamination at angle $\phi=180^0$?
+
+\subsection*{Page 56, Beam polarization}
+
+Eq. (4.26) mentions a statistical error of 1\% on the beam polarization.
+This number does not seem compatible with the size of the error bands on Fig. 2.1 (page 14)
+
+Page 56, last line, 'asymmetry' is misspelled.
+
+\subsection*{Page 57, Combinatorial background}
+
+First of all it is not clear why you call this background combinatorial. You have only two photons.
+
+Taking into account that you have only 5 $\phi$ bins you can  fit 10 distributions and get the number of  $\pi^0$ mesons in every bin. Just test different background curves and estimate systematics. 
+
+\subsection*{Page 57, Double $\pi^0$ background subtraction}
+
+It is the main systematic error in this paper. The absence of the realistic model is not an excuse. 
+You have to write the generator with tunable parameters that describe the t-distribution, $Q^2$ distribution, and W-distribution.
+Comparing of data and MC will help you to tune the parameters and create the realistic model of the
+double pion electroproduction.
+
+It will be extremely interesting to measure the asymmetry as a function of the $M(\pi^0p)$. Is the $\Delta$ region different from other mass bins? You can plot the asymmetry as a function of $M(\pi^0p)$.
+
+Page 57, Line 4 'mentioned', Line 19, 'without', Line 21, 'writing', Line 28, 'appears'.
+
+\section*{Chapter 5, Double $\pi^0$ background}
+
+\subsection*{Page 60}
+Usually the $\pi^0$ mass resolution behaves as $1/\sqrt{E_\pi^0}$. Do you use constant values for your 
+$\sigma_{P_i}$?  
+
+\subsection*{Page 63, 5.2.1 Event selection}
+
+How did you find the parameters that you use for the exclusivity cuts?
+Please provide all necessary distributions for the cuts in Table 5.1.
+
+There is no proof that the exclusive reaction was singled out. Moreover, Fig. 5.4 demonstrates that 
+$\pi^0\pi^0\pi^0$ events leak into the $\pi^0\pi^0$ sample. Let us note that $\eta\to \pi^0\pi^0\pi^0$  decay is not the only source of the multi pions events. It is just one of the possible channels.
+
+Each of the photon directions could be used as a cut for exclusivity, comparing detected and predicted directions.
+Can those 4 distributions be produced ?
+
+\subsection*{Page 70, Neutral pion identification}
+
+''The results of the fitsare shown in figure'' $\rightarrow$ ''The results of the fits are shown in figure''
+
+The width of the gaussian seems to change by up to 10\% depending on the background shape.
+That change presumably affects the number of events $N$ in the gaussian by about the same amount in the formula
+$$g(x)=\frac{N}{\sigma\sqrt{2\pi}}e^{-(x-\mu)^2/2\sigma^2}$$
+Can we see the sensitivity of the number of events to the background shape?
+
+Page 63, fourth line from the bottom, 'background'.
+
+\subsection*{Page 70, Validity of the Monte-Carlo model for the event generator}
+
+The statement that given the large number of particles in the final state, the reaction kinematics are close to a phase space distribution is suspicious. 
+Fig. 5.10 demonstrates for example that the t-distribution is completely different from the phase space, as well as the W-distribution. 
+
+There seems to be an ambiguity as to which neutral pion to choose for the definition of hadronic variables $\Phi$ and $t$.
+It is not clear how you defined the variables $\Phi$ and $t$ for 2 pion production.
+
+\subsection*{Fig 5.10}
+This figure seems to indicate very little available simulation below W=2. 
+Is it also the case for the signal channel ? (we have not seen the W distribution for simulation of $ep\rightarrow e\Delta\gamma$)
+It would not be unreasonable to imagine that the higher $W$ region has less background for this reaction !
+
+On the same plot, the t-distribution look quite different as well.
+Has t been calculated in the same manner for both GSIM and data ?
+Is there a better way to calculate t which could help, such as using the DVCS photon direction only and assuming exclusivity (knowledge of the particle masses), as HERMES often did?
+
+Page 70, Line 13, 'fits are'.
+
+\subsection*{Page 72}
+
+Please plot the invariant mass distribution $M(\pi^0p$).
+
+The comparison of the data and MC distributions is unsatisfactory. Look for example to the W distribution
+or t-distribution. We would like to stress again that the simple model doesn't work well and you have to invest more effort into a realistic MC simulation. 
+The background reaction is important for the estimation of the leakage to the $\Delta$VCS process.
+
+We would like to see the $\phi$-distribution weighted with the acceptance for
+$\pi^0$ and $\Delta$VCS processes. 
+
+Do you have a cut on W? 
+
+\subsection*{Page 73}
+
+The beam spin asymmetry distribution is very suspicious. It is almost independent of the angle
+and in average negative. The fit by eye gives a value about 10\%. 
+A non-zero integrated BSA amounts to parity violation, which usually amounts to a few parts per million $\sim g^2\frac{Q^2}{M_Z^2}$.
+You have to carefully investigate why you have this shift in BSA. 
+If you will not understand the reason for the error in the estimation of this BSA, 
+the measurement of BSA in the $\Delta$VCS process should include an additional systematic error corresponding to this observation.
+
+\section*{Chapter 6 Neutron $\pi^+$ channel}
+
+Page 74, Line 1, 'reaction in', Line 4 omit 'follows', Line 5 'exclusive events', Line 8 'to identify in the', and 'This', second to last line 'requires', last line 'mentioned'.
+
+Is there any reason why the $\phi$ binning is different from the $\Delta\rightarrow p\pi^0$ channel?
+There was previously a sharp dip in the contamination around $\phi=180$ degrees.
+Now 180 has become a bin limit.
+
+First line~: ''$ep\rightarrow en\pi^+\gamma$ reactionin the ...'' $\rightarrow$ ''$ep\rightarrow en\pi^+\gamma$ reaction in the ...''
+
+Second paragraph, first line~: ''exclusives events'' $\rightarrow$ ''exclusive events''.
+
+Second paragraph, line 4~: ''identity'' $\rightarrow$ ''identify''.
+ 
+\subsection*{Page 75, 6.1 Identification of $ep\rightarrow en\pi^+\gamma X$}
+ 
+The same comment concerning dangerous correlated missing mass cuts applies here.
+Can you also produce 4 distributions of the angle between the directions as measured and predicted, one for each particle in the final state?
+
+\subsection*{Page 75, 6.1.1 Selection cuts setting: Monte-Carlo method} 
+
+Please provide us with all distributions that you use to select the exclusive reactions and listed in Table 6.1 step by step starting from the raw distributions. 
+You are using so many exclusivity cuts that it is difficult to estimate your ability to select your reaction. 
+Some of the distributions like missing energy, $M^2_{en\gamma}$ and $M_{epi^+\gamma} $ are
+far away from the nominal positions. Make pictures in such a way that we can see the real discrepancy in more details. 
+
+Different sources of the background ($\rho$ and $\pi\pi$) demand different MC program for the estimation of the background.
+The statement that these two channels are the same from the analysis point of view is wrong. Provide detailed comparison of the data and MC for both of anticipated background reactions. 
+
+Can Table 6.1 be supplemented with an estimation of the number of "sigma" from say a gaussian fit, adjusted to avoid the radiative/background tail ?
+
+\subsection*{Page 78, Figure 6.3}
+As in the other channel, there does not seem to be any $Q^2>1$, $W>2$ and $-t>-t_{min} $ cut. The figure is called "correlations", but actually some of the features of these distributions are caused only by cuts or energy conservation. What conditions are applied to the data in these plots? 
+
+Page 78, fourth line from the bottom, 'plotted in Figure'
+Page 79, Line 4, 'Third'.
+Page 82, figure caption 'invariant mass'.
+Page 84, Section 6.4.2 title, 'Systematic'.
+
+\section*{Chapter 7, Analysis of the $ep\rightarrow en\pi^+\pi^0$ background}
+
+Page 86, Line 2, 'is bond to' - meaning of this expression is unknown. Line 3, 'one'.
+
+\subsection*{Page 86, 7.1 Identification of $ep\rightarrow en\pi^+\pi^0$ events}
+
+The analysis again makes use of several missing mass squared cuts.
+In this section, the agreement between data and simulation seems however significantly better.
+Can Table 7.1 be supplemented with an estimation of the number of "sigma" from say a gaussian fit, adjusted to avoid the radiative/background tail ?
+Can we see the distributions for the angle between predicted and detected particles after all selection cuts ?
+
+\subsection*{Page 89, $\pi^0$ plots}
+
+Caption of Fig. 7.2 : ''afer'' $\rightarrow$ ''after''
+
+Fig 7.3 : although there seem to be very little background, it would still be good to see that the number of $\pi^0$ does not depend on the shape of the fit for the background.
+
+\subsection*{Page 90, Validity of the Monte-Carlo model used for the event generator}
+
+There is a short statement ''The presented results is the best that can be achieved by varying the relative proportion of resonant and non resonant events.''
+It seems important and interesting to have further information on this point.
+Presumably, the authors of reference [3] have a prediction for this proportion.
+Anticipating on the final result, the information could prove valuable for model building.
+
+At least in the non-resonant case, there does not seem to be any particular reason for $\gamma^*n\pi^+\pi^0$ to be coplanar.
+What was the definition of $\Phi$ and t ?
+
+Page 92, last line, 'third'.
+
+\subsection*{Page 93, Fig. 7.6}
+ 
+As before, it seems that BSA integrated over $\Phi$ must be comparable with usual parity violating asymmetries in electron scattering.
+ However it is clearly seen from the Fig. 7.6 that average BSA for $\Delta$ region is around -0.1.
+ It indicates a serious systematic error in the determination of BSA for this reaction.  If BSA for the
+ reaction $ep\to en\pi^+\pi^0$ is corrupted how can we believe your measurement for the 
+ more complicated reaction $ep\to en\pi^+\gamma$?
+ 
+  
+\section*{Part III, Results and discussion}
+
+It would be very beneficial before the final publication to discuss the interpretation of the results with some of the authors of [3].
+
+Page 95, last line, 'missing mass'.
+
+\subsection*{Page 96, Result contribution}
+ 
+Second line : ''usefull'' $\rightarrow$ ''useful''
+ 
+Line 5 : ''statistic'' $\rightarrow$ ''statistics''
+  
+Reference [3] and the discussion page 97 does not mention ''final state interaction''.
+Is it correct this hadronic correction would be included in the partonic language of ''higher twists'' ?
+
+Depending on whether the final of version of the note estimates larger systematics, the discussion on the future of the measurement may have to be substantially rewritten.
+A more appropriate conclusion may include the suggestion to investigate partial wave analysis, which should be much more efficient and improvable than mere missing mass cuts.
+
+Apart from future JLab measurement, is there any perspective for measurements elsewhere ?
+The (im)possibility of competitive or cross-check measurement would shed light on the importance of those results and the strategy for future analysis methods.
+
+Page 99, Line 7, 'can be used to sign' could be replaced by 'indicate'; Line 9, 'two years'; Line 11, 'impinging'; Line 14, 'at'.
+
+\section*{Cross check of the analysis note results}
+
+The review Committee wants to point out to
+a lack of adequate details in the note. We have a concern that the events
+at the threshold region of the $M(N\pi)$  distribution are mostly due to the low energy noise 
+in the CLAS calorimeters.
+For this reason  Alex Kubarovsky started to check some key distribution concerning
+DeltaVCS analysis with the standard DVCS group momentum corrections, angle corrections and fiducial cuts. So we request to produce the same distributions by the authors of the analysis note  and compare with the 
+standard DVCS analysis results.
+
+The reaction is : \\
+$ep \to e p \gamma_1 \gamma_2 \gamma_3$ \\
+$\pi^0 \to  \gamma_2+\gamma_3 $  \\
+$\Delta  \to p+\pi^0=p+(\gamma_2+\gamma_3) $\\
+$\gamma_1$ is the DVCS photon (with the highest energy).
+
+
+The file names are connected with the selection of the photons.
+The photons are in order of the energy: $E(\gamma_1)>E(\gamma_2)>E(\gamma_3)$.
+\begin{enumerate}
+\item misen\_ECEC       - $\gamma_1$ is anywhere,  $\gamma_2$ in EC, $\gamma_3$ in EC
+\item misen\_ECECEC  -  $\gamma_1$ is in EC,  $\gamma_2$ in EC, $\gamma_3$ in EC
+\item minen\_ECECIC   -  $\gamma_1$ is in EC,  $\gamma_2$ in EC, $\gamma_3$ in IC
+\item etc
+\end{enumerate}
+
+The distributions are:
+\begin{enumerate}
+\item Missing energy
+\item Missing px
+\item Missing py
+\item $M(\gamma_2 \gamma_3)$   ($\pi^0$)
+\item $M_x(e\gamma_1\gamma_2\gamma_3)$  (proton)
+\item $M^2_x$ ($ep\gamma_1$)  ($\pi^0$)
+\item $M^2_x$ ($ep\gamma_2\gamma_3$) (photon)
+\item $M(p\gamma_2\gamma_3)$ ($\Delta$)
+\item $M(\gamma_1\gamma_2\gamma_3)$ (you can see $\omega$ in this graph)
+\end{enumerate}
+
+The pages are organized as follows:
+\begin{itemize}
+\item {Page 1} - no cuts
+\item Page 2 - px, py missing momentum cut
+\item Page 3 - And M(g2g3) cut
+\item Page 4 - And Mx(eggg) 
+\item Page 5 - And $M^2$ mis(eg1)
+\item Page 6 - And missing energy cut
+\item Page 7 - Missing energy for  cuts in order
+\item Page 8 - as page 7, log scale.
+\end{itemize}
+
+The main concern for the moment is that there is a lack of events in the  $\Delta$ region  
+of $M(p\gamma_2\gamma_3)$ distribution (plot N8)
+in page 6 after all cuts. We don't see a signal in all combinations of photons.
+May be it is connected with the cut on EC photons ($>$ 300 MeV) in this analysis. 
+We want to check it out.
+
+ 
+\end{document}  
